@@ -51,8 +51,8 @@ module "without_new_groups" {
 }
 ```
 ## Examples
-[With creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/with_new_groups.tf)
-[Without creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/without_new_groups.tf)
+- [With creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/with_new_groups.tf)
+- [Without creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/without_new_groups.tf)
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
