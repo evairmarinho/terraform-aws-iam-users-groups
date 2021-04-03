@@ -1,5 +1,5 @@
 # Introduction
-- This Terraform Stack create **IAM users** and optionally **IAM groups** dynamically in AWS cloud. 
+- This Terraform module create **IAM users** and optionally **IAM groups** dynamically in AWS cloud. 
 ## Permissions
 - Crate a policy with content below and attach in EC2 IAM Role or IAM User. These permissions are required to works correctly!
 
