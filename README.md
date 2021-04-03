@@ -34,8 +34,6 @@ module "without_new_groups" {
   source = "evairmarinho/iam-users-groups/aws"
   region = "us-east-1"
   version = "~> 1.0.2"
-  access_key = "<MY_ACCESS_KEY>"
-  secret_key = "<MY_SECRET_KEY>"
   create_groups = false
   users = {
       "user1": {
