@@ -27,7 +27,30 @@
     ]
 }
 ```
+## Usage
+```hcl
+module "without_new_groups" {
 
+  source = "evairmarinho/iam-users-groups/aws"
+  region = "us-east-1"
+  access_key = "<MY_ACCESS_KEY>"
+  secret_key = "<MY_SECRET_KEY>"
+  create_groups = false
+  users = {
+      "user1": {
+          name: "evair.marinho"
+          groups: ["DevOps"]
+          path: "/"
+      },
+      "user2":{
+          name: "joao.sousa"
+          groups: ["Billing"]
+          path: "/"
+      }
+  }
+
+}
+```
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -51,9 +74,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | AWS Access Key | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | Region where the resources will be created. | `string` | n/a | yes |
-| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | AWS Secret Access Key | `string` | n/a | yes |
 | <a name="input_create_groups"></a> [create\_groups](#input\_create\_groups) | Define if Terraform will create new\_groups based on variable groups. | `bool` | `true` | no |
 | <a name="input_groups"></a> [groups](#input\_groups) | List of group names for Terraform create, case create\_groups variable be true | `list(string)` | `[]` | no |
 | <a name="input_users"></a> [users](#input\_users) | Map for Terraform create users. | `map(any)` | <pre>{<br>  "user1": {<br>    "groups": [<br>      "ADM",<br>      "developers"<br>    ],<br>    "name": "test",<br>    "path": "/"<br>  }<br>}</pre> | no |

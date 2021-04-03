@@ -27,12 +27,3 @@ variable "create_groups" {
   default     = true
   description = "Define if Terraform will create new_groups based on variable groups."
 }
-
-variable "access_key" {
-  type        = string
-  description = "AWS Access Key"
-}
-variable "secret_key" {
-  type        = string
-  description = "AWS Secret Access Key"
-}
