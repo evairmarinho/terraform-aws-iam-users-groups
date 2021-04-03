@@ -29,7 +29,7 @@
 ```
 ## Usage
 ```hcl
-module "without_new_groups" {
+module "terraform-aws-iam-users-groups" {
 
   source = "evairmarinho/iam-users-groups/aws"
   region = "us-east-1"
