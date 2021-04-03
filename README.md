@@ -33,6 +33,7 @@ module "without_new_groups" {
 
   source = "evairmarinho/iam-users-groups/aws"
   region = "us-east-1"
+  version = "~> 1.0.2"
   access_key = "<MY_ACCESS_KEY>"
   secret_key = "<MY_SECRET_KEY>"
   create_groups = false
@@ -51,6 +52,9 @@ module "without_new_groups" {
 
 }
 ```
+## Examples
+[With creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/with_new_groups.tf)
+[Without creation of new IAM groups](https://github.com/evairmarinho/terraform-aws-iam-users-groups/blob/main/examples/without_new_groups.tf)
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
