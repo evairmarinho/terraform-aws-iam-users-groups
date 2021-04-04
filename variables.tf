@@ -11,13 +11,7 @@ variable "groups" {
 
 variable "users" {
   type = map(any)
-  default = {
-    "user1" : {
-      name : "test"
-      groups : ["ADM", "developers"]
-      path : "/"
-    }
-  }
+  default = {}
   description = "Map for Terraform create users."
 
 }
