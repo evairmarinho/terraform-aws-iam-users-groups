@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = var.region
+  region = var.region
 }
 
 
@@ -10,14 +10,14 @@ resource "aws_iam_group" "groups" {
 }
 
 resource "aws_iam_user" "users" {
-  for_each = try(var.users,[])
+  for_each = try(var.users, [])
   name     = each.value.name
   path     = try(each.value.path, "/")
 
 }
 
 resource "aws_iam_user_group_membership" "user_to_groups" {
-  for_each   = try(var.users,[])
+  for_each   = try(var.users, [])
   user       = each.value.name
   groups     = each.value.groups
   depends_on = [aws_iam_user.users, aws_iam_group.groups]

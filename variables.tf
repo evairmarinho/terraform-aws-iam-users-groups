@@ -10,8 +10,8 @@ variable "groups" {
 }
 
 variable "users" {
-  type = map(any)
-  default = {}
+  type        = map(any)
+  default     = {}
   description = "Map for Terraform create users."
 
 }
