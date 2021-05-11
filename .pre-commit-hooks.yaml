@@ -1,6 +1,0 @@
--   repo: local
-    hooks:
-    -   id: post-commit-local
-        name: post commit
-        always_run: true
-        stages: [post-commit]
