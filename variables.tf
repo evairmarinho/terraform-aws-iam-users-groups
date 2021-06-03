@@ -1,8 +1,3 @@
-variable "region" {
-  type        = string
-  description = "Region where the resources will be created."
-}
-
 variable "groups" {
   type        = list(string)
   default     = []

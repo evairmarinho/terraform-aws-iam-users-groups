@@ -1,8 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
-
 resource "aws_iam_group" "groups" {
   for_each = var.create_groups ? toset(var.groups) : toset([])
   name     = each.value
