@@ -19,5 +19,5 @@ variable "users" {
 variable "create_groups" {
   type        = bool
   default     = false
-  description = "Define if Terraform will create new_groups based on variable groups."
+  description = "Define if Terraform will create new_groups based on variable groups ."
 }
