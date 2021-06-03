@@ -71,7 +71,6 @@ module "terraform-aws-iam-users-groups" {
 ## Providers
 
 | Name | Version |
-<<<<<<< HEAD
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.50 |
 
