@@ -4,6 +4,8 @@ repos:
     hooks:
       - id: terraform_fmt
       - id: terraform_docs
+        args:
+         - '--args=--sort-by-required'
       - id: terraform_validate
       - id: terraform_tflint
         args:
@@ -19,3 +21,6 @@ repos:
             - '--args=--only=terraform_required_version'
             - '--args=--only=terraform_required_providers'
             - '--args=--only=terraform_standard_module_structure'
+      - id: terraform_tfsec
+        args:
+          - "--args=-e AWS002,AWS003,AWS004,AWS005,AWS006,AWS007,AWS008,AWS009,AWS010,AWS012,AWS014,AWS015,AWS016,AWS017,AWS019,AWS020,AWS021,AWS022,AWS023,AWS024,AWS025,AWS031,AWS032,AWS033,AWS034,AWS035,AWS036,AWS045,AWS046,AWS047,AWS048,AWS049,AWS050,AWS051,AWS052,AWS053,AWS057,AWS058,AWS059,AWS060,AWS061,AWS066,AWS067,AWS068,AWS069,AWS070,AWS071,AWS072,AWS077,AWS079,AWS080,AWS081,AWS083,AWS084,AWS085,AWS086,AWS089,AWS091,AWS092,AWS093,AWS094,AWS095,AWS096"
