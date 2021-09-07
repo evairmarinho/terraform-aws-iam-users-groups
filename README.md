@@ -87,6 +87,7 @@ module "terraform-aws-iam-users-groups" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | n/a | `any` | n/a | yes |
 | <a name="input_create_groups"></a> [create\_groups](#input\_create\_groups) | Define if Terraform will create new\_groups based on variable groups . | `bool` | `false` | no |
 | <a name="input_groups"></a> [groups](#input\_groups) | List of group names for Terraform create, case create\_groups variable be true | `list(string)` | `[]` | no |
 | <a name="input_users"></a> [users](#input\_users) | Map for Terraform create users. | `map(any)` | `{}` | no |
