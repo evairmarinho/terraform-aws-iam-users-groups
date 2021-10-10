@@ -37,7 +37,7 @@
 module "terraform-aws-iam-users-groups" {
 
   source = "evairmarinho/iam-users-groups/aws"
-  version = "=1.0.4"
+  version = "= 1.0.4"
   create_groups = false
   users = {
       "user1": {
