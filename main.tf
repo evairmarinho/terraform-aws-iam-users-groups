@@ -2,7 +2,7 @@ resource "aws_iam_group" "groups" {
   for_each = var.create_groups ? toset(var.groups) : toset([])
   name     = each.value
   path     = "/"
-}
+    }
 
 resource "aws_iam_user" "users" {
   for_each = try(var.users, [])
