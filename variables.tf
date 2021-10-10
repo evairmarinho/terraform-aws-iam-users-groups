@@ -16,3 +16,9 @@ variable "create_groups" {
   default     = false
   description = "Define if Terraform will create new_groups based on variable groups ."
 }
+
+variable "tags" {
+  type        = map(string)
+  default     = {}
+  description = "Tags for all resources."
+}

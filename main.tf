@@ -8,6 +8,7 @@ resource "aws_iam_user" "users" {
   for_each = try(var.users, [])
   name     = each.value.name
   path     = try(each.value.path, "/")
+  tags     = var.tags
 
 }
 
