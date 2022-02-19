@@ -72,7 +72,7 @@ module "terraform-aws-iam-users-groups" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.50 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.62.0 |
 
 ## Resources
 

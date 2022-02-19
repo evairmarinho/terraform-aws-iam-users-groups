@@ -3,12 +3,16 @@ resource "aws_iam_group" "groups" {
   name     = each.value
   path     = "/"
 }
+
 resource "aws_iam_user" "users" {
   for_each = try(var.users, [])
   name     = each.value.name
   path     = try(each.value.path, "/")
   tags     = var.tags
 }
+
+
+
 
 resource "aws_iam_user_group_membership" "user_to_groups" {
   for_each   = try(var.users, [])
