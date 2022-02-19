@@ -15,12 +15,9 @@ output:
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
     <!-- END_TF_DOCS -->
-
 sort:
   enabled: true
-  by:
-    - required
-
+  by: "required"
 settings:
   anchor: true
   color: true
